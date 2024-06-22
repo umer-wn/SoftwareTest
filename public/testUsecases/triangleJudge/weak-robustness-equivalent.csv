@@ -1,0 +1,11 @@
+TestCaseID,Edge1,Edge2,Edge3,ExpectedOutput,ActualOutput,Correctness
+1,10,10,20,Not triangle,,
+2,10,10,10,Equilateral triangle,,
+3,10,10,15,Isosceles triangle,,
+4,10,15,20,Normal triangle,,
+5,-1,10,20,Not triangle,,
+6,201,10,10,Not triangle,,
+7,10,-1,15,Not triangle,,
+8,10,201,15,Not triangle,,
+9,10,10,-1,Not triangle,,
+10,10,15,201,Not triangle,,

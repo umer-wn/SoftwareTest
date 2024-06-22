@@ -1,0 +1,35 @@
+{
+  "name": "software-testing",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@8.7.5",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview --port 5050",
+    "typecheck": "vue-tsc",
+    "lint": "eslint 'src/**/*.{ts,vue}' --cache --fix"
+  },
+  "dependencies": {
+    "@stackblitz/sdk": "^1.10.0",
+    "echarts": "^5.5.0",
+    "highlight.js": "^11.9.0",
+    "papaparse": "^5.4.1",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@types/papaparse": "^5.3.14",
+    "@vicons/ionicons5": "^0.12.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^9.2.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "naive-ui": "^2.38.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.9.0",
+    "vfonts": "^0.0.3",
+    "vite": "^5.2.11",
+    "vue-tsc": "^2.0.19"
+  }
+}
