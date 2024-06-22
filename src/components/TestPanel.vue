@@ -467,7 +467,7 @@ const ellipsisColumns = computed(() => {
               />
             </n-scrollbar>
           </n-card>
-        </n-tab-pane>
+        </n-tab-pane>         
       </n-tabs>
     </div>
     

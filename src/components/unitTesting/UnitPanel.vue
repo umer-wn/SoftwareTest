@@ -14,12 +14,7 @@ const pagination = {
       <slot name="test-case" />
     </n-text>
     <br>
-    <n-data-table
-      size="small"
-      :max-height="40000"
-      :bordered="true"
-      :pagination="pagination"
-    />
+    <!--yg-->
   </n-card>
 </template>
 
