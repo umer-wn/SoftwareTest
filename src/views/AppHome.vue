@@ -13,7 +13,34 @@ import IconVue from '../components/icons/IconVue.vue'
     content-style="padding-bottom: 0;"
     footer-style="margin-bottom: 0;padding-bottom: 0;"
   >
-
+  <!--居中标题”软件测试系统“-->
+    <div class="flex-wrapper">
+      <div class="flex-column">
+        <h1 class="project-title">软件测试系统</h1>
+        <NDivider class="divider" />
+        <p class="tech-stack">
+          <span>技术栈：</span>
+          <NIcon>
+            <IconNaiveUi />
+          </NIcon>
+          <NIcon>
+            <IconVite />
+          </NIcon>
+          <NIcon>
+            <IconVue />
+          </NIcon>
+          <NIcon>
+            <LogoCss3 />
+          </NIcon>
+        </p>
+        <p class="intro">
+          本项目是一个软件测试系统，用于展示软件测试的各种测试方法和工具。
+        </p>
+        <p class="try">
+          请尝试点击左侧的导航栏，查看各种测试方法和工具的介绍。
+        </p>
+      </div>
+    </div>
   </n-card>
 </template>
 

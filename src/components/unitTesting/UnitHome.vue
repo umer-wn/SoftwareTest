@@ -10,31 +10,37 @@ import { NCard, NText, NA, NBlockquote, NH2, NUl, NLi } from 'naive-ui'
     </n-blockquote>
     <n-text tag="div">
       单元测试通常适用于独立的业务逻辑、组件、类、模块或函数，不涉及 UI 渲染、网络请求或其他环境问题。
-    </n-text>
-    <br>
-    <n-text tag="div">
-      这些通常是与 Vue 无关的纯 JavaScript/TypeScript 模块。一般来说，在 Vue 应用中为业务逻辑编写单元测试与使用其他框架的应用没有明显区别。<br>
-      本项目中的测试对象为unity内各组件，测试脚本使用C#与java实现，使用Unity Test Runner进行动态测试。
+      在该项目中对Springboot后端以及Unity端的几个主要类通过模拟调用进行单元测试。
     </n-text>
     <n-h2>测试工具</n-h2>
     <n-text tag="div">
-      本项目使用unity自带的单元测试工具进行测试，
+      Unity开发使用的静态测试工具为<n-a
+        href="https://github.com/vad710/UnityEngineAnalyzer"
+        target="_blank"
+      >UnityEngineAnalyzer
+      </n-a>，动态测试工具为
       <n-a
         href="https://docs.unity.cn/cn/2019.1/Manual/PlaymodeTestFramework.html"
         target="_blank"
       >Unity Test Runner
-      </n-a>
-      Unity Test Runner是Unity的一个内置测试框架，用于在编辑器中运行测试。
-    </n-text>
-    <br>
+      </n-a>；<br>
+      Java开发的后端使用的静态测试工具为
+      <n-a
+        href="https://checkstyle.org/"
+        target="_blank"
+      >Checkstyle
+      </n-a>，动态测试工具为
+      <n-a
+        href="https://www.bing.com/search?q=JUnit&form=ANNTH1&refig=b610e89fc9c34fc4a57760944a0702c5&pc=HCTS&adppc=EDGEESS"
+        target="_blank"
+      >JUnit
+      </n-a>。
+    </n-text>    
+    <n-h2>测试对象</n-h2>
     <n-text tag="div">
-      通过编写测试脚本与设计测试用例，该测试项目实现了:<br>
+      通过编写测试脚本与设计测试用例，该测试项目实现了对以下类的测试:<br>
       该unity的两个主要类：LoadMatchCSV和CameraSystem<br>
-      后端springboot的主要类：<br>
-      <n-ul>
-        <n-li>LoadMatchCSV：通过临近匹配算法，实现用户点击返回最近图片位点</n-li>
-        <n-li>CameraSystem：通过读取用户键盘鼠标句柄，实现对视角的调整</n-li>
-      </n-ul>
+      后端springboot的三个主要类：UrlService、ColorService、RiskSerive<br>
     </n-text>
   </n-card>
 </template>
@@ -43,6 +49,7 @@ import { NCard, NText, NA, NBlockquote, NH2, NUl, NLi } from 'naive-ui'
 .unit-home-wrapper {
   height: 41.5em;
   box-sizing: border-box;
+  overflow-y: auto; /* 添加这一行 */
 }
 
 .vitest-logo {
