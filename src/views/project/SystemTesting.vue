@@ -1,62 +1,49 @@
 <script setup lang="ts">
 import { NTabs, NTabPane } from 'naive-ui'
 import SystemHomeVue from '../../components/systemTesting/SystemHome.vue'
-import sdk from '@stackblitz/sdk'
-import { onMounted } from 'vue'
 
 const tabs = [
   {
     name: 'home',
-    tab: '系统测试'
+    tab: '集成测试',
+  }
+]
+const reports =[
+  {
+    name: 'System-STReport0.0',
+    tab: 'System-STReport0.0',
+    testCase: '测试后端接口，发现Risk类的接口在前端传入错误输入时仍然能够正常处理，未能检测到错误。',
+    html: '/STReport/report.html'
   }
 ]
 
-onMounted(() => {
-  // 嵌入stackblitz项目
-  const stackblitz = document.getElementById('stackblitz')
-
-  sdk.embedProjectId(
-    stackblitz as HTMLElement,
-    'vitest-dev-vitest-sahho6',
-    {
-      forceEmbedLayout: true,
-      openFile: 'README.md',
-      view: 'editor',
-      height: '99.5%',
-      width: '100%',
-      theme: 'light',
-      //initialPath: '/__vitest__',
-    }
-  )
-    .then(() => {
-      const iframe = document.getElementById('stackblitz')
-      iframe?.setAttribute('style', 'border: none;border: 1px solid #eee;')
-    })
-})
 </script>
 
 <template>
   <div class="root-wrapper">
     <div class="left-part">
-      <n-tabs
-        type="line"
-        animated
-        default-value="home"
-      >
-        <n-tab-pane
-          v-for="{name, tab} in tabs"
-          :key="name"
-          :name="name"
-          :tab="tab"
-        >
-          <system-home-vue v-if="name === 'home'" />
+      <n-tabs type="line" animated default-value="home">
+        <n-tab-pane v-for="{name, tab} in tabs" :key="name" :name="name" :tab="tab">
+          <System-home-vue v-if="name === 'home'" />
         </n-tab-pane>
       </n-tabs>
     </div>
     <div class="right-part">
-      <div id="stackblitz" />
-    </div>
+      <n-tabs type="line" animated default-value="System-STReport0.0">
+        <n-tab-pane v-for="{ name, tab, testCase, html } in reports" :key="name" :name="name" :tab="tab">
+          <system-panel-vue context="name">
+            <div>
+              <h2>{{ tab }}</h2>
+            </div>
+              <p>{{ testCase }}</p>
+              <div class="iframe-container">
+                <iframe v-if="html" :src="html" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+              </div>
+          </system-panel-vue>
+        </n-tab-pane>
+      </n-tabs>
   </div>
+  </div>  
 </template>
 
 <style scoped>
@@ -65,13 +52,15 @@ onMounted(() => {
   gap: .5em;
   font-size: 1rem;
 }
-
 .left-part {
-  width: 36em;
+  width: 16em;
 }
-
+.iframe-container {
+  overflow-y: auto; /* 添加滚动条 */
+  max-height: 100%; /* 或者根据需要设置一个具体的最大高度 */
+}
 .right-part {
   box-sizing: border-box;
-  width: 45.6em;
+  width: 70em;
 }
 </style>

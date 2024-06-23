@@ -1,0 +1,245 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > LoginController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.aaa.controller</a>
+</div>
+
+<h1>Coverage Summary for Class: LoginController (com.example.aaa.controller)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LoginController</td>
+<td class="coverageStat">
+  <span class="percent">
+    33.3%
+  </span>
+  <span class="absValue">
+    (1/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    20%
+  </span>
+  <span class="absValue">
+    (1/5)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">LoginController$LoginRequest</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">LoginController$LoginResponse</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/7)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    7.7%
+  </span>
+  <span class="absValue">
+    (1/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    5.9%
+  </span>
+  <span class="absValue">
+    (1/17)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.aaa.controller;
+&nbsp;import com.example.aaa.controller.Result;
+&nbsp;import org.springframework.http.HttpStatus;
+&nbsp;import org.springframework.http.ResponseEntity;
+&nbsp;import org.springframework.web.bind.annotation.PostMapping;
+&nbsp;import org.springframework.web.bind.annotation.RequestBody;
+&nbsp;import org.springframework.web.bind.annotation.RequestMapping;
+&nbsp;import org.springframework.web.bind.annotation.RestController;
+&nbsp;
+&nbsp;@RestController
+&nbsp;@RequestMapping(&quot;/api&quot;)
+<b class="fc">&nbsp;public class LoginController {</b>
+&nbsp;
+&nbsp;    @PostMapping(&quot;/login&quot;)
+&nbsp;
+&nbsp;
+&nbsp;    public Result login(@RequestBody LoginRequest loginRequest) {
+&nbsp;        // 在这里处理登录逻辑，您可以验证用户名和密码等
+<b class="nc">&nbsp;        if (isValidUser(loginRequest)) {</b>
+&nbsp;            // 登录成功，返回响应给Vue前端
+&nbsp;//        return ResponseEntity.ok(&quot;Login successful&quot;);
+&nbsp;//            return ResponseEntity.ok(new LoginResponse(200, &quot;Login successful&quot;));
+<b class="nc">&nbsp;           return new Result(200);</b>
+&nbsp;        } else {
+&nbsp;            // 登录失败，返回错误响应给Vue前端
+&nbsp;//            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(&quot;Login failed&quot;);
+&nbsp;            //return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new LoginResponse(401, &quot;Login failed&quot;));
+<b class="nc">&nbsp;            return new Result(404);</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    // 示例验证方法，您需要根据实际需求实现
+&nbsp;    private boolean isValidUser(LoginRequest loginRequest) {
+&nbsp;        // 这里可以根据传递的登录请求验证用户的用户名和密码
+&nbsp;        // 例如，可以查询数据库或使用其他身份验证方法
+&nbsp;        // 在示例中，只简单判断用户名和密码是否为&quot;admin&quot;和&quot;password&quot;
+<b class="nc">&nbsp;        return &quot;a&quot;.equals(loginRequest.getUsername()) &amp;&amp; &quot;z&quot;.equals(loginRequest.getPassword());</b>
+&nbsp;
+&nbsp;//        if (&quot;1&quot;.equals(loginRequest.getUsername()) &amp;&amp; &quot;1&quot;.equals(loginRequest.getPassword())) {
+&nbsp;//            return true;
+&nbsp;//        } else {
+&nbsp;//            return false;
+&nbsp;//        }
+&nbsp;    }
+&nbsp;
+&nbsp;    // 登录请求的数据模型
+<b class="nc">&nbsp;    private static class LoginRequest {</b>
+&nbsp;        private String username;
+&nbsp;        private String password;
+&nbsp;
+&nbsp;        // getter和setter方法
+&nbsp;        // ...
+&nbsp;
+&nbsp;        public String getUsername() {
+<b class="nc">&nbsp;            return username;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public void setUsername(String username) {
+<b class="nc">&nbsp;            this.username = username;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public String getPassword() {
+<b class="nc">&nbsp;            return password;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public void setPassword(String password) {
+<b class="nc">&nbsp;            this.password = password;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;    private static class LoginResponse {
+&nbsp;        private int code;
+&nbsp;        private String message;
+&nbsp;
+<b class="nc">&nbsp;        public LoginResponse(int code, String message) {</b>
+<b class="nc">&nbsp;            this.code = code;</b>
+<b class="nc">&nbsp;            this.message = message;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public int getCode() {
+<b class="nc">&nbsp;            return code;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public void setCode(int code) {
+<b class="nc">&nbsp;            this.code = code;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public String getMessage() {
+<b class="nc">&nbsp;            return message;</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        public void setMessage(String message) {
+<b class="nc">&nbsp;            this.message = message;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-06-18 17:34</div>
+</div>
+</body>
+</html>

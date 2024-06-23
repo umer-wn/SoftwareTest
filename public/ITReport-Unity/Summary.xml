@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>2024/6/23 - 14:15:53</Generatedon>
+    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Assemblies>5</Assemblies>
+    <Classes>38</Classes>
+    <Files>36</Files>
+    <Coveredlines>723</Coveredlines>
+    <Uncoveredlines>1603</Uncoveredlines>
+    <Coverablelines>2326</Coverablelines>
+    <Totallines>4054</Totallines>
+    <Linecoverage>31</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>97</Coveredmethods>
+    <Totalmethods>249</Totalmethods>
+    <Methodcoverage>38.9</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="Assembly-CSharp" classes="11" coverage="0" coveredlines="0" coverablelines="360" totallines="777" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="53" methodcoverage="0">
+      <Class name="CameraRotate" coverage="0" coveredlines="0" coverablelines="8" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="ColliderTest" coverage="0" coveredlines="0" coverablelines="22" totallines="45" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="ConeCollider" coverage="0" coveredlines="0" coverablelines="67" totallines="168" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="ConeColliderEditor" coverage="0" coveredlines="0" coverablelines="41" totallines="168" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="DigitalRuby.RainMaker.DemoScript" coverage="0" coveredlines="0" coverablelines="122" totallines="175" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="12" methodcoverage="0" />
+      <Class name="DigitalRuby.RainMaker.DemoScript2D" coverage="0" coveredlines="0" coverablelines="23" totallines="43" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="DigitalRuby.RainMaker.DemoScriptStartRainOnSpaceBar" coverage="0" coveredlines="0" coverablelines="16" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="EnemyFind" coverage="0" coveredlines="0" coverablelines="13" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="InCheck" coverage="0" coveredlines="0" coverablelines="15" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="PlayerMove" coverage="0" coveredlines="0" coverablelines="23" totallines="35" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="SwingObject" coverage="0" coveredlines="0" coverablelines="10" totallines="22" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="ConeMeshAssembly" classes="1" coverage="4.4" coveredlines="5" coverablelines="112" totallines="174" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="20" methodcoverage="5">
+      <Class name="KevinCastejon.ConeMesh.Cone" coverage="4.4" coveredlines="5" coverablelines="112" totallines="174" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="20" methodcoverage="5" />
+    </Assembly>
+    <Assembly name="ConeMeshEditorAssembly" classes="1" coverage="0" coveredlines="0" coverablelines="43" totallines="82" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0">
+      <Class name="KevinCastejon.ConeMesh.ConeEditor" coverage="0" coveredlines="0" coverablelines="43" totallines="82" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+    <Assembly name="GameAssembly" classes="20" coverage="52.1" coveredlines="706" coverablelines="1355" totallines="2469" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="92" totalmethods="137" methodcoverage="67.1">
+      <Class name="CameraSystem" coverage="64" coveredlines="132" coverablelines="206" totallines="347" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="14" totalmethods="16" methodcoverage="87.5" />
+      <Class name="CanvasWall" coverage="3.7" coveredlines="5" coverablelines="134" totallines="252" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="11" methodcoverage="27.2" />
+      <Class name="ClickBuilding" coverage="13.5" coveredlines="8" coverablelines="59" totallines="126" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="5" methodcoverage="40" />
+      <Class name="Display1by1" coverage="6.5" coveredlines="4" coverablelines="61" totallines="96" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="6" methodcoverage="16.6" />
+      <Class name="GenerateBuilding" coverage="75.8" coveredlines="47" coverablelines="62" totallines="156" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="7" methodcoverage="57.1" />
+      <Class name="GenerateLineAndUAV" coverage="100" coveredlines="56" coverablelines="56" totallines="99" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+      <Class name="GeneratePicturesScatters" coverage="100" coveredlines="25" coverablelines="25" totallines="47" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
+      <Class name="GenerateTip" coverage="0" coveredlines="0" coverablelines="20" totallines="51" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="InteractivePatternBtnHandler" coverage="36.3" coveredlines="4" coverablelines="11" totallines="25" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="3" methodcoverage="66.6" />
+      <Class name="LittleMap" coverage="67.7" coveredlines="21" coverablelines="31" totallines="74" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
+      <Class name="Loader" coverage="5.1" coveredlines="5" coverablelines="98" totallines="151" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="8" methodcoverage="25" />
+      <Class name="LoadMatchCSV" coverage="66.6" coveredlines="148" coverablelines="222" totallines="371" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="21" totalmethods="22" methodcoverage="95.4" />
+      <Class name="LoadUAVCSV" coverage="96.4" coveredlines="55" coverablelines="57" totallines="117" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="13" totalmethods="13" methodcoverage="100" />
+      <Class name="MapCamera" coverage="100" coveredlines="6" coverablelines="6" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="MyClass" coverage="0" coveredlines="0" coverablelines="11" totallines="28" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="RainController" coverage="6.2" coveredlines="1" coverablelines="16" totallines="32" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="SingleDotControling" coverage="0" coveredlines="0" coverablelines="21" totallines="38" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="SkyController" coverage="6.6" coveredlines="1" coverablelines="15" totallines="31" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="2" methodcoverage="50" />
+      <Class name="StadiometryControlling" coverage="50" coveredlines="30" coverablelines="60" totallines="98" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="5" methodcoverage="60" />
+      <Class name="YellowDotsControling" coverage="85.8" coveredlines="158" coverablelines="184" totallines="310" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="11" totalmethods="11" methodcoverage="100" />
+    </Assembly>
+    <Assembly name="RainMaker" classes="5" coverage="2.6" coveredlines="12" coverablelines="456" totallines="1082" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="36" methodcoverage="11.1">
+      <Class name="DigitalRuby.RainMaker.BaseRainScript" coverage="3.6" coveredlines="7" coverablelines="194" totallines="362" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="8" methodcoverage="12.5" />
+      <Class name="DigitalRuby.RainMaker.LoopingAudioSource" coverage="0" coveredlines="0" coverablelines="33" totallines="362" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="DigitalRuby.RainMaker.RainCollision" coverage="5.5" coveredlines="2" coverablelines="36" totallines="64" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="6" methodcoverage="33.3" />
+      <Class name="DigitalRuby.RainMaker.RainScript" coverage="6.8" coveredlines="3" coverablelines="44" totallines="72" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="DigitalRuby.RainMaker.RainScript2D" coverage="0" coveredlines="0" coverablelines="149" totallines="222" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="10" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

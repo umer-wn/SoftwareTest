@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > RiskService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.aaa</a>
+</div>
+
+<h1>Coverage Summary for Class: RiskService (com.example.aaa)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RiskService</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    19.2%
+  </span>
+  <span class="absValue">
+    (5/26)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;
+&nbsp;package com.example.aaa;
+&nbsp;
+&nbsp;import org.springframework.stereotype.Service;
+&nbsp;import java.sql.*;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Objects;
+&nbsp;
+&nbsp;@Service
+&nbsp;public class RiskService {
+&nbsp;    private Connection conn;
+&nbsp;
+<b class="fc">&nbsp;    public RiskService() {</b>
+<b class="fc">&nbsp;        init();</b>
+&nbsp;    }
+&nbsp;    private void init() {
+&nbsp;        try {
+<b class="fc">&nbsp;            Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</b>
+<b class="fc">&nbsp;            conn = DriverManager.getConnection(&quot;jdbc:mysql://rm-uf66v0c512w048jzp1o.mysql.rds.aliyuncs.com:3306/stone_wall?sessionVariables=sql_mode=&#39;NO_ENGINE_SUBSTITUTION&#39;&amp;jdbcCompliantTruncation=false&quot;,</b>
+&nbsp;                    &quot;gaoyu&quot;, &quot;gaoyu123!&quot;);
+<b class="nc">&nbsp;        } catch (Exception e) {</b>
+<b class="nc">&nbsp;            throw new RuntimeException(e);</b>
+<b class="fc">&nbsp;        }</b>
+&nbsp;    }
+&nbsp;    public List&lt;String&gt; getRiskInfoList(String color) throws SQLException {
+<b class="nc">&nbsp;        List&lt;String&gt; IdInfoList = new ArrayList&lt;&gt;();</b>
+<b class="nc">&nbsp;        String query = &quot;SELECT source_image_ID&quot;</b>
+&nbsp;                + &quot; FROM image_color WHERE color = ?&quot;;
+&nbsp;
+&nbsp;            try {
+<b class="nc">&nbsp;                if(Objects.equals(color, &quot;0&quot;)) {</b>
+<b class="nc">&nbsp;                    query += &quot; OR color = ?&quot;;</b>
+&nbsp;                }
+&nbsp;                //控制台输出查询语句
+<b class="nc">&nbsp;                System.out.println(&quot;查询结果&quot;+query);</b>
+<b class="nc">&nbsp;                PreparedStatement stmt = conn.prepareStatement(query);</b>
+<b class="nc">&nbsp;                if(color.equals(&quot;0&quot;)) {</b>
+<b class="nc">&nbsp;                    stmt.setString(1, &quot;1&quot;);</b>
+<b class="nc">&nbsp;                    stmt.setString(2, &quot;2&quot;);</b>
+&nbsp;                }else {
+<b class="nc">&nbsp;                    stmt.setString(1, color);</b>
+&nbsp;                }
+<b class="nc">&nbsp;                ResultSet rs = stmt.executeQuery();</b>
+&nbsp;
+<b class="nc">&nbsp;                while (rs.next()) {</b>
+<b class="nc">&nbsp;                    String IdInfo = rs.getString(&quot;source_image_ID&quot;);</b>
+<b class="nc">&nbsp;                    IdInfoList.add(IdInfo);</b>
+<b class="nc">&nbsp;                }</b>
+<b class="nc">&nbsp;            } catch (SQLException e) {</b>
+<b class="nc">&nbsp;                throw new RuntimeException(e);</b>
+<b class="nc">&nbsp;            }</b>
+<b class="nc">&nbsp;        return IdInfoList;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-06-18 17:34</div>
+</div>
+</body>
+</html>

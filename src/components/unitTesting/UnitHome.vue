@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { NCard, NText, NA, NBlockquote, NH2, NUl, NLi } from 'naive-ui'
-import IconVitestVue from '../icons/IconVitest.vue'
-
 </script>
 
 <template>
@@ -37,10 +35,6 @@ import IconVitestVue from '../icons/IconVitest.vue'
         <n-li>LoadMatchCSV：通过临近匹配算法，实现用户点击返回最近图片位点</n-li>
         <n-li>CameraSystem：通过读取用户键盘鼠标句柄，实现对视角的调整</n-li>
       </n-ul>
-    </n-text>
-    <n-h2>测试用例</n-h2>
-    <n-text tag="div">
-      测试用例使用包括等价类、边界值的思想进行设计，以保证测试的全面性与有效性。<br>
     </n-text>
   </n-card>
 </template>
