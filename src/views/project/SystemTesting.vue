@@ -12,7 +12,7 @@ const reports =[
   {
     name: 'System-STReport0.0',
     tab: 'System-STReport0.0',
-    testCase: '测试后端接口，发现Risk类的接口在前端传入错误输入时仍然能够正常处理，未能检测到错误。',
+    testCase: '使用seleniumIDE进行系统测试，针对系统业务功能设计6组设计用例；针对系统业务流设计5组测试用例，统一使用seleniumIDE模拟用户输入实现',
     html: '/STReport/report.html'
   }
 ]

@@ -12,13 +12,13 @@ const reports =[
   {
     name: 'Unity-UTReport0.0',
     tab: 'Unity-UTReport0.0',
-    testCase: '使用强健壮等价类设计测试用例,包含选点模块和相机模块。该单元测试使用unity test runner实现,选取了unity端38个类中的6个类进行测试，代码覆盖率36.4%，方法覆盖率39.7%',
+    testCase: '使用强健壮等价类设计测试用例,选取了unity端38个类中的6个类进行测试，代码覆盖率36.4%，方法覆盖率39.7%',
     html: '/UTReport-unity1/Report/index.html'
   },
   {
     name: 'Backend-UTReport0.0',
     tab: 'Backend-UTReport0.0',
-    testCase: '使用强健壮等价类设计测试用例,包含选点模块和相机模块。该单元测试使用unity test runner实现,选取了unity端38个类中的6个类进行测试，代码覆盖率36.4%，方法覆盖率39.7%',
+    testCase: '使用强健壮等价类设计测试用例,选取了springboot端16个类中的11个类进行测试，代码覆盖率32.7%，方法覆盖率30.4%',
     html: '/UTReport-backend/index.html'
   },
 ]

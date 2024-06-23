@@ -12,7 +12,7 @@ const reports =[
   {
     name: 'Backend-ITReport0.0',
     tab: 'Backend-ITReport0.0',
-    testCase: '测试后端接口，发现Risk类的接口在前端传入错误输入时仍然能够正常处理，未能检测到错误。',
+    testCase: '测试后端接口，发现Risk类接口在前端传入错误输入时仍然能够正常处理，未能检测到错误。',
     html: '/ITReport-backend/index0.html'
   },
   {
@@ -24,7 +24,7 @@ const reports =[
   {
     name: 'Unity-ITReport0.0',
     tab: 'Unity-ITReport0.0',
-    testCase: '使用',
+    testCase: '使用等价类方法设计测试用例，测试工具与单元测试工具相同，方法覆盖率38.9%',
     html: '/ITReport-Unity/index.html'
   }
 ]
