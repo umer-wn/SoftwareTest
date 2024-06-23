@@ -1,17 +1,10 @@
 <template>
   <div class="logo">
-    <n-icon
-      class="image"
-      :size="32"
-      color="#5FBC21"
-    >
-      <LogoCss3 />
-    </n-icon>
     <h1
       v-if="showTitle"
       class="title"
     >
-      Libre Testing
+      Software Test
     </h1>
   </div>
   <n-menu
@@ -74,7 +67,7 @@ const menuOptions: MenuOption[] = [
   {
     label: '期末项目',
     key: 'final-project',
-    icon: renderIcon(EaselSharp),
+    icon: renderIcon(MenuOutline),
     children: [
       {
         label: () => h(RouterLink, {
